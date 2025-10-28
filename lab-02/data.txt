@@ -1,0 +1,138 @@
+1. Funkcja x^2 - 2
+x0 = 10
+(x0, x1) = (0, 5)
+[-1, 3]
+
+Iteracja 1: x = 5.1
+Iteracja 2: x = 2.7460784313725486
+Iteracja 3: x = 1.7371948743795982
+Iteracja 4: x = 1.444238094866232
+Iteracja 5: x = 1.4145256551487377
+Iteracja 6: x = 1.4142135968022693
+x0 ≈ 1.4142136, wyznaczone w 6 iteracjach.
+
+Iteracja 1: x = 0.40000000000000036
+Iteracja 2: x = 0.7407407407407409
+Iteracja 3: x = 2.0129870129870127
+Iteracja 4: x = 1.2677729257641923
+Iteracja 5: x = 1.3874865945578918
+Iteracja 6: x = 1.4156875855906106
+Iteracja 7: x = 1.4141995082442536
+Iteracja 8: x = 1.414213555052622
+x0 ≈ 1.4142136, wyznaczone w 8 iteracjach.
+
+Iteracja 1: x = 1.0
+Iteracja 2: x = 2.0
+Iteracja 3: x = 1.5
+Iteracja 4: x = 1.25
+Iteracja 5: x = 1.375
+Iteracja 6: x = 1.4375
+Iteracja 7: x = 1.40625
+Iteracja 8: x = 1.421875
+Iteracja 9: x = 1.4140625
+Iteracja 10: x = 1.41796875
+Iteracja 11: x = 1.416015625
+Iteracja 12: x = 1.4150390625
+Iteracja 13: x = 1.41455078125
+Iteracja 14: x = 1.414306640625
+Iteracja 15: x = 1.4141845703125
+Iteracja 16: x = 1.41424560546875
+Iteracja 17: x = 1.414215087890625
+Iteracja 18: x = 1.4141998291015625
+Iteracja 19: x = 1.4142074584960938
+Iteracja 20: x = 1.4142112731933594
+Iteracja 21: x = 1.4142131805419922
+Iteracja 22: x = 1.4142141342163086
+x0 ≈ 1.4142141, wyznaczone w 22 iteracjach.
+
+2. Funkcja cos(x) - x
+x0 = 2
+(x0, x1) = (1.5, 2)
+[-2, 2]
+
+Iteracja 1: x = 0.7345361688544632
+Iteracja 2: x = 0.7390897242053693
+Iteracja 3: x = 0.7390851332198145
+x0 ≈ 0.7390851, wyznaczone w 3 iteracjach.
+
+Iteracja 1: x = 0.7758709519116036
+Iteracja 2: x = 0.7435998586024769
+Iteracja 3: x = 0.7391210158273938
+Iteracja 4: x = 0.7390851689003448
+x0 ≈ 0.7390852, wyznaczone w 4 iteracjach.
+
+Iteracja 1: x = 0.0
+Iteracja 2: x = 1.0
+Iteracja 3: x = 0.5
+Iteracja 4: x = 0.75
+Iteracja 5: x = 0.625
+Iteracja 6: x = 0.6875
+Iteracja 7: x = 0.71875
+Iteracja 8: x = 0.734375
+Iteracja 9: x = 0.7421875
+Iteracja 10: x = 0.73828125
+Iteracja 11: x = 0.740234375
+Iteracja 12: x = 0.7392578125
+Iteracja 13: x = 0.73876953125
+Iteracja 14: x = 0.739013671875
+Iteracja 15: x = 0.7391357421875
+Iteracja 16: x = 0.73907470703125
+Iteracja 17: x = 0.739105224609375
+Iteracja 18: x = 0.7390899658203125
+Iteracja 19: x = 0.7390823364257812
+Iteracja 20: x = 0.7390861511230469
+Iteracja 21: x = 0.7390842437744141
+Iteracja 22: x = 0.7390851974487305
+x0 ≈ 0.7390852, wyznaczone w 22 iteracjach.
+
+3. Funkcja x^3 - 2x + 2
+x0 = 2.0
+(x0, x1) = (0, 2)
+[-3, 1]
+
+Iteracja 1: x = 1.4
+Iteracja 2: x = 0.8989690721649484
+Iteracja 3: x = -1.2887793276654596
+Iteracja 4: x = -2.105767299013565
+Iteracja 5: x = -1.8291999504602496
+Iteracja 6: x = -1.771715812062107
+Iteracja 7: x = -1.76929656115579
+Iteracja 8: x = -1.769292354251341
+x0 ≈ -1.7692924, wyznaczone w 8 iteracjach.
+
+Iteracja 1: x = -1.0
+Iteracja 2: x = -4.0
+Iteracja 3: x = -1.1578947368421053
+Iteracja 4: x = -1.29625520110957
+Iteracja 5: x = -2.253635790823563
+Iteracja 6: x = -1.6106176890419768
+Iteracja 7: x = -1.7227516026685028
+Iteracja 8: x = -1.7752390754687957
+Iteracja 9: x = -1.769089251497457
+Iteracja 10: x = -1.7692914895094536
+Iteracja 11: x = -1.7692923543647705
+x0 ≈ -1.7692924, wyznaczone w 11 iteracjach.
+
+Iteracja 1: x = -1.0
+Iteracja 2: x = -2.0
+Iteracja 3: x = -1.5
+Iteracja 4: x = -1.75
+Iteracja 5: x = -1.875
+Iteracja 6: x = -1.8125
+Iteracja 7: x = -1.78125
+Iteracja 8: x = -1.765625
+Iteracja 9: x = -1.7734375
+Iteracja 10: x = -1.76953125
+Iteracja 11: x = -1.767578125
+Iteracja 12: x = -1.7685546875
+Iteracja 13: x = -1.76904296875
+Iteracja 14: x = -1.769287109375
+Iteracja 15: x = -1.7694091796875
+Iteracja 16: x = -1.76934814453125
+Iteracja 17: x = -1.769317626953125
+Iteracja 18: x = -1.7693023681640625
+Iteracja 19: x = -1.7692947387695312
+Iteracja 20: x = -1.7692909240722656
+Iteracja 21: x = -1.7692928314208984
+Iteracja 22: x = -1.769291877746582
+x0 ≈ -1.7692919, wyznaczone w 22 iteracjach.
