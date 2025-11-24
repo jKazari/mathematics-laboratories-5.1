@@ -1,0 +1,165 @@
+======================================================================
+Przykład 1: dobrze uwarunkowany
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+
+    ┌ 2   3  -6 ┐        ┌  7 ┐
+A = │ 1  -6   8 │    b = │ 14 │
+    └ 3  -2   1 ┘        └ 28 ┘
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+    ┌ 20 ┐
+x = │ 25 │
+    └ 18 ┘
+
+    ┌     1       0       0 ┐        ┌ 3     -2       1 ┐        ┌ 0  0  1 ┐
+L = │ 0.667       1       0 │    U = │ 0  4.333  -6.667 │    P = │ 1  0  0 │
+    └ 0.333  -1.231       1 ┘        └ 0      0  -0.538 ┘        └ 0  1  0 ┘
+
+s = [6 8 3]
+
+p = (2 0 1)
+
+Próba rozwiązania metodą naiwną:
+Rozwiązanie naiwne:
+    ┌ 20 ┐
+x = │ 25 │
+    └ 18 ┘
+
+----------------------------------------------------------------------
+
+
+======================================================================
+Przykład 2: zero na przekątnej
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+
+A = ┌ 0  1 ┐
+    └ 1  1 ┘
+
+b = ┌ 1 ┐
+    └ 2 ┘
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+x = ┌ 1 ┐
+    └ 1 ┘
+
+L = ┌ 1  0 ┐    U = ┌ 1  1 ┐    P = ┌ 0  1 ┐
+    └ 0  1 ┘        └ 0  1 ┘        └ 1  0 ┘
+
+s = [1 1]
+
+p = (1 0)
+
+Próba rozwiązania metodą naiwną:
+Metoda naiwna zawiodła:
+  Zerowy element a[0,0] -> metoda naiwna zawodzi.
+
+----------------------------------------------------------------------
+
+
+======================================================================
+Przykład 3: bardzo mały epsilon na przekątnej
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+
+A = ┌ 0.000  1 ┐
+    └     1  1 ┘
+
+b = ┌ 1 ┐
+    └ 2 ┘
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+x = ┌ 1.000 ┐
+    └     1 ┘
+
+L = ┌     1  0 ┐    U = ┌ 1  1 ┐    P = ┌ 0  1 ┐
+    └ 0.000  1 ┘        └ 0  1 ┘        └ 1  0 ┘
+
+s = [1 1]
+
+p = (1 0)
+
+Próba rozwiązania metodą naiwną:
+Rozwiązanie naiwne:
+x = ┌ 1.000 ┐
+    └     1 ┘
+
+----------------------------------------------------------------------
+
+
+======================================================================
+Przykład 4: poprawny układ 3×3
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+
+    ┌ 4  -2   1 ┐        ┌ 1 ┐
+A = │ 1   6  -2 │    b = │ 2 │
+    └ 3   1   5 ┘        └ 3 ┘
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+    ┌ 0.361 ┐
+x = │ 0.376 │
+    └ 0.308 ┘
+
+    ┌     1      0      0 ┐        ┌ 4     -2       1 ┐        ┌ 1  0  0 ┐
+L = │ 0.250      1      0 │    U = │ 0  6.500  -2.250 │    P = │ 0  1  0 │
+    └ 0.750  0.385      1 ┘        └ 0      0   5.115 ┘        └ 0  0  1 ┘
+
+s = [4 6 5]
+
+p = (0 1 2)
+
+Próba rozwiązania metodą naiwną:
+Rozwiązanie naiwne:
+    ┌ 0.361 ┐
+x = │ 0.376 │
+    └ 0.308 ┘
+
+----------------------------------------------------------------------
+
+
+======================================================================
+Przykład 5: układ słabo uwarunkowany
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+
+    ┌ 1      1      1 ┐        ┌     3 ┐
+A = │ 1  1.000      1 │    b = │ 3.000 │
+    └ 1      1  1.000 ┘        └ 3.000 ┘
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+    ┌ 1.000 ┐
+x = │ 1.000 │
+    └     1 ┘
+
+    ┌ 1  0  0 ┐        ┌ 1      1      1 ┐        ┌ 1  0  0 ┐
+L = │ 1  1  0 │    U = │ 0  0.000      0 │    P = │ 0  1  0 │
+    └ 1  0  1 ┘        └ 0      0  0.000 ┘        └ 0  0  1 ┘
+
+s = [1  1.0001  1.0002]
+
+p = (0 1 2)
+
+Próba rozwiązania metodą naiwną:
+Rozwiązanie naiwne:
+    ┌ 1.000 ┐
+x = │ 1.000 │
+    └     1 ┘
+
+----------------------------------------------------------------------

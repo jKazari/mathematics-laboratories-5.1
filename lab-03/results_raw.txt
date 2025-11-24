@@ -1,0 +1,248 @@
+======================================================================
+Przykład 1: dobrze uwarunkowany
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+A =
+         2           3          -6
+         1          -6           8
+         3          -2           1
+
+b =
+         7
+        14
+        28
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+x =
+        20
+        25
+        18
+
+L =
+         1           0           0
+  0.666667           1           0
+  0.333333    -1.23077           1
+
+U =
+         3          -2           1
+         0     4.33333    -6.66667
+         0           0   -0.538462
+
+P =
+         0           0           1
+         1           0           0
+         0           1           0
+
+s =
+[6. 8. 3.]
+
+p =
+[2 0 1]
+
+Próba rozwiązania metodą naiwną:
+Rozwiązanie naiwne:
+        20
+        25
+        18
+
+----------------------------------------------------------------------
+
+
+======================================================================
+Przykład 2: zero na przekątnej
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+A =
+         0           1
+         1           1
+
+b =
+         1
+         2
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+x =
+         1
+         1
+
+L =
+         1           0
+         0           1
+
+U =
+         1           1
+         0           1
+
+P =
+         0           1
+         1           0
+
+s =
+[1. 1.]
+
+p =
+[1 0]
+
+Próba rozwiązania metodą naiwną:
+Metoda naiwna zawiodła:
+  Zerowy element a[0,0] -> metoda naiwna zawodzi.
+
+----------------------------------------------------------------------
+
+
+======================================================================
+Przykład 3: bardzo mały epsilon na przekątnej
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+A =
+     1e-12           1
+         1           1
+
+b =
+         1
+         2
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+x =
+         1
+         1
+
+L =
+         1           0
+     1e-12           1
+
+U =
+         1           1
+         0           1
+
+P =
+         0           1
+         1           0
+
+s =
+[1. 1.]
+
+p =
+[1 0]
+
+Próba rozwiązania metodą naiwną:
+Rozwiązanie naiwne:
+  0.999978
+         1
+
+----------------------------------------------------------------------
+
+
+======================================================================
+Przykład 4: poprawny układ 3×3
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+A =
+         4          -2           1
+         1           6          -2
+         3           1           5
+
+b =
+         1
+         2
+         3
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+x =
+  0.360902
+   0.37594
+  0.308271
+
+L =
+         1           0           0
+      0.25           1           0
+      0.75    0.384615           1
+
+U =
+         4          -2           1
+         0         6.5       -2.25
+         0           0     5.11538
+
+P =
+         1           0           0
+         0           1           0
+         0           0           1
+
+s =
+[4. 6. 5.]
+
+p =
+[0 1 2]
+
+Próba rozwiązania metodą naiwną:
+Rozwiązanie naiwne:
+  0.360902
+   0.37594
+  0.308271
+
+----------------------------------------------------------------------
+
+
+======================================================================
+Przykład 5: układ słabo uwarunkowany
+======================================================================
+
+Metoda eliminacji Gaussa ze skalowanym wyborem wierszy głównych:
+Dla danych macierzy A i b:
+A =
+         1           1           1
+         1      1.0001           1
+         1           1      1.0002
+
+b =
+         3
+    3.0001
+    3.0002
+
+Otrzymujemy rozwiązanie x, macierze L i U z rozkładu LU, macierz permutacji P, oraz wektor skal s i powstałą w pierwszym kroku permutację p:
+
+x =
+         1
+         1
+         1
+
+L =
+         1           0           0
+         1           1           0
+         1           0           1
+
+U =
+         1           1           1
+         0      0.0001           0
+         0           0      0.0002
+
+P =
+         1           0           0
+         0           1           0
+         0           0           1
+
+s =
+[1.     1.0001 1.0002]
+
+p =
+[0 1 2]
+
+Próba rozwiązania metodą naiwną:
+Rozwiązanie naiwne:
+         1
+         1
+         1
+
+----------------------------------------------------------------------
