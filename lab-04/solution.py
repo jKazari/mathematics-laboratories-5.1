@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 def cubic_spline(t, y):
     """
@@ -52,12 +53,50 @@ def cubic_spline(t, y):
 
     return spline, z
 
-t = [0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25]
-y = [np.sqrt(i) for i in t]
+def run_test(title, t_nodes, y_nodes, true_func=None):
+    S, z = cubic_spline(t_nodes, y_nodes)
+    
+    x_dense = np.linspace(t_nodes[0], t_nodes[-1], 300)
+    y_spline = [S(x) for x in x_dense]
+    
+    plt.figure(figsize=(10, 8))
+    
+    if true_func:
+        y_true = [true_func(np.clip(x, t_nodes[0], t_nodes[-1])) for x in x_dense]
+        plt.plot(x_dense, y_true, color='#377eb8', linestyle='--', linewidth=1.5, label='Rzeczywista funkcja', alpha=0.7)
+        
+    plt.plot(x_dense, y_spline, color='#377eb8', linestyle='-', linewidth=2.5, label='Funkcja sklejana')
+    
+    plt.plot(t_nodes, y_nodes, color="#26567d", marker='o', linestyle='', markersize=8, label='Węzły', zorder=5)
 
-f, z = cubic_spline(t, y)
+    plt.grid(which='major', color='#DDDDDD', linewidth=1.2)
+    plt.minorticks_on()
+    plt.grid(which='minor', color='#EEEEEE', linestyle=':', linewidth=0.8)
+    
+    plt.axis('equal')
 
-print("Druga pochodna w punktach:")
-for i in z:
-    print(i)
-print("Wartość funkcji sklejanej w x = 1.5:", f(1.5))
+    plt.title(title, fontsize=14, fontweight='bold', pad=15)
+    plt.xlabel('t', fontsize=12)
+    plt.ylabel('y', fontsize=12)
+    plt.legend(loc='upper right', framealpha=1.0)
+    
+    plt.show()
+
+    print(f"--- {title} ---")
+    print(f"Węzły: {t_nodes}")
+    print(f"Obliczona wartość 'z' (2 pochodna) w punktach: {[round(val, 4) for val in z]}\n")
+
+# Przykład 1: Funkcja sin(x) w przedziale [0, 2pi] z 4 węzłami równo rozłożonymi
+t1 = np.linspace(0, 2*np.pi, 4) 
+y1 = np.sin(t1)
+run_test("Funkcja $\sin(t)$ z węzłami równo rozłożonymi", t1, y1, np.sin)
+
+# Przykład 2: Funkcja sqrt(x) w przedziale [0, 2.25] z 10 węzłami równo rozłożonymi
+t2 = np.linspace(0, 2.25, 10)
+y2 = [np.sqrt(val) for val in t2]
+run_test("Funkcja $\sqrt{t}$ z węzłami równo rozłożonymi", t2, y2, np.sqrt)
+
+# Przykład 2: Funkcja sqrt(x) w przedziale [0, 2.25] z 10 węzłami nierówno rozłożonymi
+t3 = [0, 0.1, 0.2, 0.4, 0.9, 1.3, 1.7, 1.8, 2, 2.25]
+y3 = [np.sqrt(val) for val in t3]
+run_test("Funkcja $\sqrt{t}$ z węzłami nierówno rozłożonymi", t3, y3, np.sqrt)
